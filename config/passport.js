@@ -1,10 +1,10 @@
 // load all the things we need
-var FacebookStrategy = require('passport-facebook').Strategy;
-var TwitterStrategy = require('passport-twitter').Strategy;
-var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+//var FacebookStrategy = require('passport-facebook').Strategy;
+//var TwitterStrategy = require('passport-twitter').Strategy;
+//var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var GitHubStrategy = require('passport-github').Strategy;
-var RedditStrategy = require('passport-reddit').Strategy;
-var DiscordStrategy = require('passport-discord').Strategy;
+//var RedditStrategy = require('passport-reddit').Strategy;
+//var DiscordStrategy = require('passport-discord').Strategy;
 
 // load up the user model
 var User = require('../models/user');
@@ -35,7 +35,7 @@ module.exports = function (passport) {
   // =========================================================================
   // FACEBOOK ================================================================
   // =========================================================================
-  passport.use(new FacebookStrategy(configAuth.facebookAuth,
+  /*passport.use(new FacebookStrategy(configAuth.facebookAuth,
     function (req, token, refreshToken, profile, done) {
 
       // asynchronous
@@ -104,12 +104,12 @@ module.exports = function (passport) {
         }
       });
 
-    }));
+    }));*/
 
   // =========================================================================
   // TWITTER =================================================================
   // =========================================================================
-  passport.use(new TwitterStrategy(configAuth.twitterAuth,
+  /*passport.use(new TwitterStrategy(configAuth.twitterAuth,
     function (req, token, tokenSecret, profile, done) {
 
       // asynchronous
@@ -180,12 +180,12 @@ module.exports = function (passport) {
 
       });
 
-    }));
+    }));*/
 
   // =========================================================================
   // GOOGLE ==================================================================
   // =========================================================================
-  passport.use(new GoogleStrategy(configAuth.googleAuth,
+  /*passport.use(new GoogleStrategy(configAuth.googleAuth,
     function (req, token, refreshToken, profile, done) {
 
       console.log(profile);
@@ -258,7 +258,7 @@ module.exports = function (passport) {
       });
 
     }));
-
+*/
   // =========================================================================
   // GitHub ==================================================================
   // =========================================================================
