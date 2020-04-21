@@ -164,7 +164,7 @@ router.get('/payment/:token/verify', isLoggedIn, function (req, res) {
   var output = {};
 
   request.get({
-    url: 'https://mynano.ninja/payment/api/verify?token=' + token,
+    url: 'https://nodes.bitcoinblack.net/payment/api/verify?token=' + token,
     json: true
   }, function (err, response, data) {
     if (err || response.statusCode !== 200) {

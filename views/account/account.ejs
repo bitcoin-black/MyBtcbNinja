@@ -71,7 +71,7 @@
       </div>
       <div class="flex">
         <div class="text-lg text-white semibold truncate">
-          {{ info.pending | toMnano | toLocaleString }} NANO
+          {{ info.pending | toMnano | toLocaleString }} BCB
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
       </div>
       <div class="flex">
         <div class="text-lg text-white semibold truncate" v-if="info">
-          <span class="mr-2">{{ info.balance | toMnano | toLocaleString }} NANO</span>
+          <span class="mr-2">{{ info.balance | toMnano | toLocaleString }} BCB</span>
         </div>
       </div>
     </div>
@@ -554,7 +554,7 @@
             <td>
               <account-alias :account="item.source"></account-alias>
             </td>
-            <td>{{item.amount | toMnano}} NANO</td>
+            <td>{{item.amount | toMnano}} BCB</td>
             <td><a v-bind:href="'/block/'+ key"><span v-html="$options.filters.formatHash(key)"></span></a></td>
           </tr>
         </tbody>
@@ -579,7 +579,7 @@
           <td>
             <account-alias :account="item.account"></account-alias>
           </td>
-          <td>{{item.amount | toMnano}} NANO</td>
+          <td>{{item.amount | toMnano}} BCB</td>
           <td><a v-bind:href="'/block/'+ item.hash"><span v-html="$options.filters.formatHash(item.hash)"></span></a></td>
         </tr>
       </tbody>
