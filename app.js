@@ -47,7 +47,7 @@ if (process.env.MATOMO_URL) {
   }));
 }
 
-app.use(ua.middleware("UA-115902726-4", { cookieName: '_ga' }));
+//app.use(ua.middleware("UA-115902726-4", { cookieName: '_ga' }));
 app.use(function (req, res, next) {
   if (!req.headers['x-forwarded-for']) {
       req.headers['x-forwarded-for'] = '0.0.0.0';
