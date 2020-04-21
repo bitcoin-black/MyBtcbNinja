@@ -7,16 +7,16 @@ module.exports = {
 
     // First application
     {
-      name      : 'My Nano Ninja',
+      name      : 'My BTCB Ninja',
       script    : 'bin/www',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
         NODE_ENV: 'production',
-        DOMAIN: 'https://mynano.ninja',
-        NODE_RPC: 'http://[::1]:7076',
+        DOMAIN: 'https://nodes.bitcoinblack.net',
+        NODE_RPC: 'http://[::1]:35000',
         NODE_INTERNAL: '12000',
-        MONGO_URL: 'mongodb://localhost:27017/mynanoninja',
-        MONGO_SESSIONURL: 'mongodb://localhost:27017/mynanoninja-session',
+        MONGO_URL: 'mongodb://localhost:27017/mybtcbninja',
+        MONGO_SESSIONURL: 'mongodb://localhost:27017/mybtcbninja-session',
         SESSION_SECRET: 'ohyeahnanoisgreat',
         SENTRY_URL: '',
         FACEBOOK_CLIENTID: '',
@@ -46,15 +46,15 @@ module.exports = {
       }
     },
     {
-      name      : 'My Nano Ninja - CRON',
+      name      : 'My Btcb Ninja - CRON',
       script    : 'cron',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
         NODE_ENV: 'production',
-        DOMAIN: 'https://mynano.ninja',
-        NODE_RPC: 'http://[::1]:7076',
-        NODE_WS: 'ws://[::1]:7078',
-        MONGO_URL: 'mongodb://localhost:27017/mynanoninja',
+        DOMAIN: 'https://nodes.bitcoinblack.net',
+        NODE_RPC: 'http://[::1]:35000',
+        NODE_WS: 'ws://[::1]:36000',
+        MONGO_URL: 'mongodb://localhost:27017/mybtcbninja',
         SENTRY_URL: '',
         EMAIL_HOST: 'smtp.myhost.com',
         EMAIL_USER: 'alert@mynano.ninja',

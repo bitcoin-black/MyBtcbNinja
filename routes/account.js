@@ -9,7 +9,7 @@ module.exports = function (nanorpc) {
     var myaccount = req.params.address;
 
     if(myaccount.startsWith('xrb_')){
-      return res.redirect('/account/' + myaccount.replace(/xrb_/g, "nano_"))
+      return res.redirect('/account/' + myaccount.replace(/xrb_/g, "bcb_"))
     }
 
     Account.findOne({
@@ -64,7 +64,7 @@ module.exports = function (nanorpc) {
     var myaccount = req.params.address;
 
     if(myaccount.startsWith('xrb_')){
-      return res.redirect('/account/' + myaccount.replace(/xrb_/g, "nano_") + '/pay')
+      return res.redirect('/account/' + myaccount.replace(/xrb_/g, "bcb_") + '/pay')
     }
 
     Account.findOne({

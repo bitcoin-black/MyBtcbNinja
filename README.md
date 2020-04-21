@@ -4,19 +4,19 @@
 </div>
 <hr />
 
-# My Nano Ninja
+# My BTCB Ninja
 
-The perfect tool for Nano representatives lists and network statistics.
+The perfect tool for BTCB representatives lists and network statistics.
 
-## What is Nano?
+## What is BTCB?
 
-Nano's goal is to become "a global currency with instantaneous transactions and zero fees over a secure, decentralized network." More information is available over on the official [Nano repository](https://github.com/nanocurrency/raiblocks).
+BTCB's goal is to become "a global currency with instantaneous transactions and zero fees over a secure, decentralized network." 
 
 ## Prerequisites
 
 - Webserver like nginx as a reverse proxy
 - MongoDB
-- Nano Node with RPC enabled
+- BTCB Node with RPC enabled
 - Node.js
 - PM2 `npm install pm2 -g`
 
@@ -35,14 +35,14 @@ server {
         listen 80;
         listen [::]:80;
 
-        server_name mynano.ninja;
+        server_name nodes.bitcoinblack.net;
 
-        // location to your MyNanoNinja
+        // location to your MyBtcbNinja
         location / {
                 proxy_pass http://127.0.0.1:4000;
         }
 
-        // location to your accept-nano instance
+        // location to your accept-btcb instance
         location /payment/ {
                 rewrite ^/payment(/.*)$ $1 break;
                 proxy_pass         http://127.0.0.1:5000;

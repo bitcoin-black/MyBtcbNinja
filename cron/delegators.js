@@ -65,7 +65,7 @@ function updateAccountDelegatorsExternal(account, callback) {
   console.log('DELEGATORS: Updating', account.account)
 
   rp({
-    uri: 'https://api.nanocrawler.cc/v2/accounts/' + account.account + '/delegators',
+    uri: 'https://betaapi.bitcoinblack.info/v2/accounts/' + account.account + '/delegators',
     json: true
   })
     .then((data) => {

@@ -7,14 +7,11 @@
 
 <script>
   const nf_reps = [
-    "nano_3arg3asgtigae3xckabaaewkx3bzsh7nwz7jkmjos79ihyaxwphhm6qgjps4",
-    "nano_1stofnrxuz3cai7ze75o174bpm7scwj9jn3nxsn8ntzg784jf1gzn1jjdkou",
-    "nano_1q3hqecaw15cjt7thbtxu3pbzr1eihtzzpzxguoc37bj1wc5ffoh7w74gi6p",
-    "nano_3dmtrrws3pocycmbqwawk6xs7446qxa36fcncush4s1pejk16ksbmakis78m",
-    "nano_3hd4ezdgsp15iemx7h81in7xz5tpxi43b6b41zn3qmwiuypankocw3awes5k",
-    "nano_1awsn43we17c1oshdru4azeqjz9wii41dy8npubm4rg11so7dx3jtqgoeahy",
-    "nano_1anrzcuwe64rwxzcco8dkhpyxpi8kd7zsjc1oeimpc3ppca4mrjtwnqposrs",
-    "nano_1hza3f7wiiqa7ig3jczyxj5yo86yegcmqk3criaz838j91sxcckpfhbhhra1"
+    "bcb_3k1t686z3hacjzigg3a4zrik4pgmsijxsad8r8ieo916ewfkr17n4wos8yq9",
+    "bcb_1epp5pteksftexytp6q3m1wa19d4ymnd6a5t7st9zugpixyzobu7thkzufr4",
+    "bcb_3kc5eysk5egs57aww3xf94jftwd9euum4zw33nyxosotbem6jpmozczdhwyi",
+    "bcb_3k1t686z3hacjzigg3a4zrik4pgmsijxsad8r8ieo916ewfkr17n4wos8yq9",
+    "bcb_3ipnwok4ojwrhzuoqz3u8btt34rzeh14ersropcg7ys9z5kyjjqeuxhhcrg7"
   ];
 
   var chartColorsReps = ['#f44336', '#9C27B0', '#3F51B5', '#03A9F4', '#009688', '#8BC34A', '#FFEB3B', '#FF9800'];
@@ -39,14 +36,14 @@
         ]
       };
 
-      // filter the Nano Foundation reps
+      // filter the BTCB Foundation reps
       chartdata.labels.push('Nano Foundation');
       chartdata.datasets[0].data.push(Math.round(data.filter(rep => nf_reps.includes(rep.account)).sum('votingweight') / 1000000000000000000000000000000));
       chartdata.datasets[0].backgroundColor.push('#AAAAAA');
 
       var colorcount = 0;
       data.forEach(function (element) {
-        // skip the Nano Foundation reps
+        // skip the BTCB Foundation reps
         if (nf_reps.includes(element.account)) return;
 
         if (element.alias) {

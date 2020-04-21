@@ -81,7 +81,7 @@ function checkNodeUptime(account, callback) {
 
       account.owner.getEmails().forEach(function (email) {
         sendDownMail(account, email);
-        sendDiscord(discordprefix + 'Nano representative **' + title + '** is down! https://mynano.ninja/account/' + account.account);
+        //sendDiscord(discordprefix + 'Nano representative **' + title + '** is down! https://mynano.ninja/account/' + account.account);
       });
 
     } else if (previous === false && account.uptime_data.last === true) {
@@ -89,7 +89,7 @@ function checkNodeUptime(account, callback) {
 
       account.owner.getEmails().forEach(function (email) {
         sendUpMail(account, email);
-        sendDiscord(discordprefix + 'Nano representative **' + title + '** is up again. https://mynano.ninja/account/' + account.account);
+        //sendDiscord(discordprefix + 'Nano representative **' + title + '** is up again. https://mynano.ninja/account/' + account.account);
       });
     }
   }
@@ -117,10 +117,10 @@ function sendUpMail(account, email) {
     var lastvote = 'Never noted';
   }
 
-  var body = 'The Nano representative ' + title + ' is up again.<br>' +
+  var body = 'The BTCB representative ' + title + ' is up again.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://mynano.ninja/account/' + account.account + '">View on My Nano Ninja</a>'
+    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB Ninja</a>'
 
   sendMail('UP: ' + title, body, email);
 }
@@ -139,17 +139,17 @@ function sendDownMail(account, email) {
     var lastvote = 'Never noted';
   }
 
-  var body = 'The Nano representative ' + title + ' is down.<br>' +
+  var body = 'The BTCB representative ' + title + ' is down.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://mynano.ninja/account/' + account.account + '">View on My Nano Ninja</a>'
+    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB Ninja</a>'
 
   sendMail('DOWN: ' + title, body, email);
 }
 
 function sendMail(subject, body, email) {
   var data = {
-    from: 'My Nano Ninja <alert@mynano.ninja>',
+    from: 'My BTCB Ninja <alert@bitcoinblack.net>',
     to: email,
     subject: subject,
     html: body

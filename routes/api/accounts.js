@@ -128,7 +128,7 @@ router.get('/:account', function (req, res) {
   var myaccount = req.params.account;
 
   if(myaccount.startsWith('xrb_')){
-    return res.redirect('/account/' + myaccount.replace(/xrb_/g, "nano_"))
+    return res.redirect('/account/' + myaccount.replace(/xrb_/g, "bcb_"))
   }
 
   Account.findOne({

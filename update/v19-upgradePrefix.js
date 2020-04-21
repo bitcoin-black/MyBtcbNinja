@@ -33,7 +33,7 @@ Account.find({
 
 function updatePrefix(account, callback) {
 
-    account.account = account.account.replace(/xrb_/g, "nano_");
+    account.account = account.account.replace(/xrb_/g, "bcb_");
 
     Account.findOneAndDelete({
       account: account.account
