@@ -340,7 +340,7 @@ module.exports = function (passport) {
     // =========================================================================
     // Reddit ==================================================================
     // =========================================================================
-    passport.use(new RedditStrategy(configAuth.redditAuth,
+   /* passport.use(new RedditStrategy(configAuth.redditAuth,
       function (req, token, refreshToken, profile, done) {
   
         // asynchronous
@@ -505,5 +505,5 @@ module.exports = function (passport) {
           });
     
         }));
-
+*/
 };
