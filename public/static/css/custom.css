@@ -205,7 +205,10 @@ ul.nav li.dropdown:hover .dropdown-menu{
     background-color: #000000;
     border-color: #000000;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
+.form-control:focus {
+    color: #fff;
+    background-color: #fff;
+}
+.form-control {
+    background-color: #fff;
 }
