@@ -97,7 +97,7 @@ pre {
 
 .splash {
     padding: 12em 0 3em;
-    background-color: #2196F3;
+    background-color: #000000;
     color: #fff;
     text-align: center
 }
@@ -191,4 +191,17 @@ ul.nav li.dropdown:hover .dropdown-menu{
 .modal-wrapper {
     display: table-cell;
     vertical-align: middle;
+}
+.bg-primary2{
+    background-color: #000000 !important;
+}
+.btn-primary2{
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+.btn-primary2:hover {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
 }

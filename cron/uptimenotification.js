@@ -120,7 +120,7 @@ function sendUpMail(account, email) {
   var body = 'The BTCB representative ' + title + ' is up again.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB Ninja</a>'
+    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB</a>'
 
   sendMail('UP: ' + title, body, email);
 }
@@ -142,14 +142,14 @@ function sendDownMail(account, email) {
   var body = 'The BTCB representative ' + title + ' is down.<br>' +
     lastvote + '.<br>' +
     'Address: ' + account.account + '<br><br>' +
-    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB Ninja</a>'
+    '<a href="https://nodes.bitcoinblack.net/account/' + account.account + '">View on My BTCB</a>'
 
   sendMail('DOWN: ' + title, body, email);
 }
 
 function sendMail(subject, body, email) {
   var data = {
-    from: 'My BTCB Ninja <alert@bitcoinblack.net>',
+    from: 'My BTCB <alert@bitcoinblack.net>',
     to: email,
     subject: subject,
     html: body

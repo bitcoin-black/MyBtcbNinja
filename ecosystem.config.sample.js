@@ -7,7 +7,7 @@ module.exports = {
 
     // First application
     {
-      name      : 'My BTCB Ninja',
+      name      : 'My-BTCB',
       script    : 'bin/www',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
@@ -46,7 +46,7 @@ module.exports = {
       }
     },
     {
-      name      : 'My Btcb Ninja - CRON',
+      name      : 'MyBtcb-CRON',
       script    : 'cron',
       "log_date_format" : "YYYY-MM-DD HH:mm:ss",
       env: {
