@@ -62,7 +62,7 @@ function updateNodeMonitor(account, callback) {
       
       // check for old prefix
       var nanoNodeAccount = data.nanoNodeAccount;
-      if ((nanoNodeAccount.startsWith('xrb_1') || nanoNodeAccount.startsWith('xrb_3')) && nanoNodeAccount.length === 64) {
+      if ((nanoNodeAccount.startsWith('bcb_') || nanoNodeAccount.startsWith('bcb_')) && nanoNodeAccount.length === 64) {
         nanoNodeAccount = 'bcb_' + nanoNodeAccount.substring(3,64);
       }
       
