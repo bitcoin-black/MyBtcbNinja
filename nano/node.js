@@ -6,7 +6,7 @@ const request = require('request');
 console.log('Using internal node at port ' + process.env.NODE_INTERNAL);
 
 const node = new NanoNode(process.env.NODE_INTERNAL);
-node.peers = ['134.209.31.161:34000', '68.183.47.36:34000'];
+node.peers = ['68.183.42.189:9075', '157.245.39.150:9075'];
 node.minimalConfirmAck = true;
 node.maxPeers = 1000;
 
