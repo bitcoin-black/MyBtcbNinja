@@ -38,7 +38,7 @@
 
       // filter the BTCB Foundation reps
       //chartdata.labels.push('Nano Foundation');
-      //chartdata.datasets[0].data.push(Math.round(data.filter(rep => nf_reps.includes(rep.account)).sum('votingweight') / 1000000000000000000000000000000));
+      //chartdata.datasets[0].data.push(Math.round(data.filter(rep => nf_reps.includes(rep.account)).sum('votingweight') / 10000000000000000000000000000));
       //chartdata.datasets[0].backgroundColor.push('#AAAAAA');
 
       var colorcount = 0;
@@ -52,7 +52,7 @@
           chartdata.labels.push(element.account);
         }
 
-        chartdata.datasets[0].data.push(Math.round(element.votingweight / 1000000000000000000000000000000));
+        chartdata.datasets[0].data.push(Math.round(element.votingweight / 10000000000000000000000000000));
         chartdata.datasets[0].backgroundColor.push(chartColorsReps[colorcount]);
         colorcount++;
         if (colorcount > chartColorsReps.length - 1) colorcount = 0;

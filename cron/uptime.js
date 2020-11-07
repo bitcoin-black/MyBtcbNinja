@@ -17,7 +17,7 @@ cron.schedule('0 3 * * *', function(){
 function updateUptime(types) {
   console.log('UPTIME: Started', types);
   Account.find()
-    .where('votingweight').gte(1000000000000000000000000000000)
+    .where('votingweight').gte(10000000000000000000000000000)
     .exec(function (err, accounts) {
       if (err) {
         console.error('UPTIME:', err);

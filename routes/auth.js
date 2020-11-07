@@ -5,7 +5,7 @@ module.exports = function (passport, nanorpc) {
   var router = express.Router();
   var Account = require('../models/account');
   const Big = require('big.js');
-  multNANO = Big('1000000000000000000000000000000');
+  multNANO = Big('10000000000000000000000000000');
 
   /* GET users listing. */
   router.get('/login', function (req, res, next) {

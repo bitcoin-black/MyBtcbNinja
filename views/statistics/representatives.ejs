@@ -50,7 +50,7 @@
 
       // filter the Nano Foundation reps
       // chartdata.labels.push('BTCB Foundation');
-      // chartdata.datasets[0].data.push(Math.round(data.filter(rep => nf_reps.includes(rep.account)).sum('votingweight') / 1000000000000000000000000000000));
+      // chartdata.datasets[0].data.push(Math.round(data.filter(rep => nf_reps.includes(rep.account)).sum('votingweight') / 10000000000000000000000000000));
       // chartdata.datasets[0].backgroundColor.push('#AAAAAA');
 
       var colorcount = 0;
@@ -64,7 +64,7 @@
           chartdata.labels.push(element.account);
         }
 
-        chartdata.datasets[0].data.push(Math.round(element.votingweight / 1000000000000000000000000000000));
+        chartdata.datasets[0].data.push(Math.round(element.votingweight / 10000000000000000000000000000));
         chartdata.datasets[0].backgroundColor.push(chartColorsReps[colorcount]);
         colorcount++;
         if (colorcount > chartColorsReps.length - 1) colorcount = 0;
@@ -207,9 +207,9 @@
 
       data.forEach(function (element) {
         chartdata.labels.push(formatDate(element.date));
-        chartdata.datasets[0].data.push(element.quorum_delta / 1000000000000000000000000000000);
-        chartdata.datasets[1].data.push(element.online_stake_total / 1000000000000000000000000000000);
-        chartdata.datasets[2].data.push(element.peers_stake_total / 1000000000000000000000000000000);
+        chartdata.datasets[0].data.push(element.quorum_delta / 10000000000000000000000000000);
+        chartdata.datasets[1].data.push(element.online_stake_total / 10000000000000000000000000000);
+        chartdata.datasets[2].data.push(element.peers_stake_total / 10000000000000000000000000000);
       });
 
       setupGraphQuorum(chartdata);
