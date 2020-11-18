@@ -7,15 +7,15 @@
   <div class="col">
     <div class="card mb-3">
       <div class="card-body">
-        <h4 class="card-title">Nano Accounts</h4>
+        <h4 class="card-title">BCB Accounts</h4>
         <p class="card-text"></p>
         <% if (accounts.length > 0) { %>
-        <!--<%= accounts.length %> Nano accounts<br>-->
+        <!--<%= accounts.length %> BCB accounts<br>-->
         <% for(var i=0; i < accounts.length; i++) { %>
         <a href="/account/<%= accounts[i].account %>"><%= accounts[i].account %></a><br>
         <% } %>
         <% } else { %>
-        No Nano accounts connected
+        No BCB accounts connected
         <% } %>
         </p>
         <a href="/auth/connect/nano" class="btn btn-primary2">
@@ -34,7 +34,7 @@
 <h2>
   Social Accounts
 </h2>
-<p>They appear on all your connected Nano accounts</p>
+<p>They appear on all your connected BCB accounts</p>
 
 <div class="row">
 
