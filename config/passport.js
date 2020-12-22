@@ -1,6 +1,6 @@
 // load all the things we need
-//var FacebookStrategy = require('passport-facebook').Strategy;
-//var TwitterStrategy = require('passport-twitter').Strategy;
+var FacebookStrategy = require('passport-facebook').Strategy;
+var TwitterStrategy = require('passport-twitter').Strategy;
 //var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 var GitHubStrategy = require('passport-github').Strategy;
 //var RedditStrategy = require('passport-reddit').Strategy;
@@ -35,7 +35,7 @@ module.exports = function (passport) {
   // =========================================================================
   // FACEBOOK ================================================================
   // =========================================================================
-  /*passport.use(new FacebookStrategy(configAuth.facebookAuth,
+  passport.use(new FacebookStrategy(configAuth.facebookAuth,
     function (req, token, refreshToken, profile, done) {
 
       // asynchronous
@@ -104,12 +104,12 @@ module.exports = function (passport) {
         }
       });
 
-    }));*/
+    }));
 
   // =========================================================================
   // TWITTER =================================================================
   // =========================================================================
-  /*passport.use(new TwitterStrategy(configAuth.twitterAuth,
+  passport.use(new TwitterStrategy(configAuth.twitterAuth,
     function (req, token, tokenSecret, profile, done) {
 
       // asynchronous
@@ -180,7 +180,7 @@ module.exports = function (passport) {
 
       });
 
-    }));*/
+    }));
 
   // =========================================================================
   // GOOGLE ==================================================================

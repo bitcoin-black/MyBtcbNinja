@@ -19,12 +19,12 @@ module.exports = {
 		passReqToCallback: true
     },
 
-	googleAuth: {
+	/*googleAuth: {
 		clientID: process.env.GOOGLE_CLIENTID,
 		clientSecret: process.env.GOOGLE_CLIENTSECCRET,
 		callbackURL: process.env.DOMAIN + '/auth/google/callback',
 		passReqToCallback: true
-	},
+	},*/
 
 	githubAuth: {
 		clientID: process.env.GITHUB_CLIENTID,
@@ -33,7 +33,7 @@ module.exports = {
 		passReqToCallback: true
 	},
 
-	redditAuth: {
+	/*redditAuth: {
 		clientID: process.env.REDDIT_CLIENTID,
 		clientSecret: process.env.REDDIT_CLIENTSECRET,
 		callbackURL: process.env.DOMAIN + '/auth/reddit/callback',
@@ -46,6 +46,6 @@ module.exports = {
 		callbackURL: process.env.DOMAIN + '/auth/discord/callback',
 		scope: 'identify email',
 		passReqToCallback: true
-	}
+	}*/
 
 };
